@@ -1,4 +1,6 @@
 // Media Queries
+$mq-315-down: "only screen and (max-width: 315px)";
+
 $mq-375-down: "only screen and (max-width: 375px)";
 $mq-375-up: "only screen and (min-width: 375px)";
 
@@ -14,6 +16,7 @@ $mq-900-up: "only screen and (min-width: 900px)";
 $mq-1000-down: "only screen and (max-width: 999px)";
 $mq-1000-up: "only screen and (min-width: 1000px)";
 
-$mq-1180-up: "only screen and (min-width: 1180px)";
+$mq-1000-extra: "only screen and (min-width: 1001px)";
 
-$mq-1400-up: "only screen and (min-width: 1400px)";
+$mq-1440-down: " (max-width: 1439px)";
+$mq-1440-up: "only screen and (min-width: 1440px)";

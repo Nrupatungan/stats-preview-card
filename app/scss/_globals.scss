@@ -1,15 +1,188 @@
-html {
+*, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 100%;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;   
-}
 body{
     min-height: 100vh;
     position: relative;
     background-color: $Verydarkblue;
+}
+
+//container styling
+main{
+    width: 315px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: $Darkdesaturatedblue;
+    color: $White;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$mq-315-down}{
+        width: 100%;
+    }
+    @media #{$mq-900-up} and (max-width:1000px){
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        height: 300px;
+        .left{
+            height: inherit;
+            padding: 10px 20px 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex: 1 1 0; 
+        }
+    }
+    @media #{$mq-1000-extra} and #{$mq-1440-down}{
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        width: 830px;
+        height: 330px;
+        .left{
+            height: inherit;
+            padding: 28px 40px 0px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex: 1 1 0; 
+        }
+    }
+    @media #{$mq-1440-up}{
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        width: 870px;
+        height: 370px;
+        .left{
+            height: inherit;
+            padding: 40px 40px 0px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex: 1 1 0; 
+        }
+    }
+
+    .header-image{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        #tint{
+            background-color: hsla(277, 72%, 31%, 0.63);
+            position:absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right:0;
+            width: 100%;
+            height: 231.2px;
+            z-index: 100;
+        }
+
+        @media #{$mq-315-down}{
+                #mobile-img{
+                    width: 100%;
+                    height: 100%;
+                }
+                #desktop-img{
+                    display: none;
+                }
+                #tint{
+                    width: 100%;
+                    height: inherit;
+                }
+        }
+        @media #{$mq-375-down}{
+            #mobile-img{
+                width: 100%;
+                height: 100%;
+            }
+            #desktop-img{
+                display: none;
+            }
+            #tint{
+                width: 100%;
+                height: inherit;
+            }
+        }
+        @media #{$mq-900-down}{
+            #mobile-img{
+                width: 100%;
+                height: 100%;
+            }
+            #desktop-img{
+                display: none;
+            }
+            #tint{
+                width: 100%;
+                height: inherit;
+            }
+        }
+        @media #{$mq-900-up} and (max-width:1000px){
+            flex: 1 1 400px;
+            order: 1;
+            height: inherit;
+            position: relative;
+            overflow: hidden;
+            #mobile-img{
+                display: none;
+            }
+            #desktop-img{
+                height: 100%;
+            }
+            #tint{
+                height: 100%;
+            }
+        }
+        @media #{$mq-1000-extra} and #{$mq-1440-down}{
+            flex: 1 1 400px;
+            order: 1;
+            height: inherit;
+            position: relative;
+            overflow: hidden;
+            #mobile-img{
+                display: none;
+            }
+            #desktop-img{
+                height: 100%;
+            }
+            #tint{
+                height: 100%;
+            }
+        }
+        @media #{$mq-1440-up}{
+            flex: 1 1 430px;
+            order: 1;
+            height: inherit;
+            position: relative;
+            overflow: hidden;
+            #mobile-img{
+                display: none;
+            }
+            #desktop-img{
+                height: 100%;
+            }
+            #tint{
+                height: 100%;
+            }
+        }
+
+    }
 }
