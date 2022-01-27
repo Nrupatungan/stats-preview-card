@@ -1,0 +1,5 @@
+#Ignore large files
+node_modules/
+
+#Ignore folder named "note.md"
+note.md
