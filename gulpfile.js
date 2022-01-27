@@ -34,7 +34,7 @@ function jsTask() {
 		],
 		{ sourcemaps: true }
 	)
-		.pipe(concat('all.js'))
+		.pipe(concat('script.js'))
 		.pipe(terser())
 		.pipe(dest('dist', { sourcemaps: '.' }));
 }
