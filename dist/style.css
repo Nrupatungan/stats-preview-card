@@ -1,2 +1,2 @@
-html{box-sizing:border-box;font-size:100%;margin:0;padding:0}*,:after,:before{box-sizing:inherit}
+html{box-sizing:border-box;font-size:100%;margin:0;padding:0}*,:after,:before{box-sizing:inherit}body{background-color:#090b1a;font-family:Inter,sans-serif;min-height:100vh;position:relative}.main-text h1{color:#fff}.main-text span{color:#aa5cdb}.main-text p{color:hsla(0,0%,100%,.75)}.stats div h2{color:#fff;font-weight:700}.stats div h5{color:hsla(0,0%,100%,.6);font-weight:400;text-transform:uppercase}.attribution{color:#fff;font-size:11px;text-align:center}.attribution a{color:#aa5cdb}
 /*# sourceMappingURL=style.css.map */
