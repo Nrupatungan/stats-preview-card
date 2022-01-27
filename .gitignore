@@ -3,3 +3,6 @@ node_modules/
 
 #Ignore folder named "note.md"
 note.md
+
+#Ignore unecessary image folders
+design/
