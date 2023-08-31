@@ -1,0 +1,222 @@
+:root{
+    /* primary */
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --tad-bit-transparent-white:  hsla(0, 0%, 100%, 0.6);
+
+    /* fonts */
+    --inter: 'Inter', sans-serif;
+    --lex-deca: 'Lexend Deca', sans-serif;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: var(--very-dark-blue);
+    padding: 5rem 0;
+}
+
+main{
+    width: 88vw;
+    background-color: var(--dark-desaturated-blue);
+    overflow: hidden;
+    border-radius: 0.7rem;
+}
+
+.hero-img{
+    position: relative;
+}
+
+.hero-img img:nth-child(1){
+    width: 100%;
+}
+
+.hero-img img:nth-child(2){
+    display: none;
+}
+
+span.tint{
+    height: 99%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: hsla(277, 72%, 31%, 0.62);
+}
+
+.hero-section{
+    padding: 1.8rem;
+    color: var(--white);
+    text-align: center;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* typography section*/
+
+h1, h2{
+    font-family: var(--inter);
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+p{
+    font-family: var(--lex-deca);
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+span{
+    color: var(--soft-violet);
+}
+
+
+article p{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.hero-section article:nth-child(3) p{
+    margin-bottom: 0;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    font-family: var(--lex-deca);
+    color: aliceblue;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+/* breakpoints section */
+
+@media only screen and (min-width: 449px){
+    html{
+        font-size: 16px;
+    }
+
+    .hero-section{
+        padding: 2.5rem 2rem 0.5rem 2rem;
+    }
+
+    .hero-section section{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    h1{
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 749px){
+    html{
+        font-size: 16px;
+    }
+
+    main{
+        max-width: 58.803125rem;
+        height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(2 , minmax(auto, 29.375rem));
+    }
+
+    .hero-img img:nth-child(1){
+        display: none;
+    }
+
+    .hero-img img:nth-child(2){
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    span.tint{
+        height: 102%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        background-color: hsla(277, 72%, 31%, 0.62);
+    }
+
+    .hero-section{
+        order: 1;
+        text-align: left;
+        display: grid;
+        grid-template-areas:
+                 "h h h"
+                 "p p p"
+                 ". . ."
+                 "f f f";
+    }
+
+    .hero-img{
+        order: 2;
+    }
+
+
+    .hero-section section{
+        padding: 1rem 2rem 1rem 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+        grid-area: f;
+    }
+
+    .hero-section section article{
+        text-align: center;
+    }
+
+    h1{
+        font-size: 2rem;
+        grid-area: h;
+        width: 90%;
+        margin-bottom: 1.8rem;
+    }
+
+    p{
+        width: 90%;
+        font-size: 1rem;
+        grid-area: p;
+    }
+
+
+}
