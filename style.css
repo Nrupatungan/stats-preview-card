@@ -131,7 +131,7 @@ article p{
 
     .hero-section section{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     h1{
@@ -178,7 +178,9 @@ article p{
     }
 
     .hero-section{
+        width: 90%;
         order: 1;
+        padding: 2rem  2rem 2rem 2.5rem;
         text-align: left;
         display: grid;
         grid-template-areas:
@@ -190,11 +192,11 @@ article p{
 
     .hero-img{
         order: 2;
+        width: 100%;
     }
 
 
     .hero-section section{
-        padding: 1rem 2rem 1rem 2rem;
         display: flex;
         gap: 1rem;
         justify-content: space-around;
@@ -208,12 +210,10 @@ article p{
     h1{
         font-size: 2rem;
         grid-area: h;
-        width: 90%;
         margin-bottom: 1.8rem;
     }
 
     p{
-        width: 90%;
         font-size: 1rem;
         grid-area: p;
     }
